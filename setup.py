@@ -30,16 +30,17 @@
   2020-04-06  1.4.0.dev5    Trying to set Tier.xmin and Tier.xmax correctly.
   2020-04-06  1.4.0.dev6    Trying to set Interval.xmin and Interval.xmax
                             correctly.
+  2020-05-25  1.4.1    Fixed readme file decoding error.
 
 '''
 
 import setuptools
 
-with open('README.md', 'r') as readme:
+with open('README.md', 'r', encoding='utf-8') as readme:
     long_description = readme.read()
 
 setuptools.setup(name='praat-textgrids',
-                 version='1.4.0.dev6',
+                 version='1.4.1',
                  description='Manipulation of Praat TextGrids',
                  long_description=long_description,
                  long_description_content_type='text/markdown',
